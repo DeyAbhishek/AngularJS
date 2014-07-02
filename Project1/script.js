@@ -26,13 +26,13 @@
 	// create the controller and inject Angular's $scope
 	myApp.controller('mainController', function($scope) {
 		// create a message to display in our view
-		$scope.message = 'Everyone come and see how good I look!';
+		$scope.message = 'I am using AngularJS Rounting!';
 	});
 
 	myApp.controller('aboutController', function($scope) {
-		$scope.message = 'Look! I am an about page.';
+		$scope.message = 'Welcome to the world od AngularJS!';
 	});
 
 	myApp.controller('contactController', function($scope) {
-		$scope.message = 'Contact us! JK. This is just a demo.';
+		$scope.message = 'AngularJS Templating';
 	});
