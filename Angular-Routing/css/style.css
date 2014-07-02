@@ -1,0 +1,19 @@
+ul {
+    list-style: none;
+}
+ul>li {
+    height: 22px;
+    float: left;
+    background-color: #30AAE4;
+    color: #FFFFFF;
+    padding: 10px;
+    cursor: pointer;
+}
+ul>li:hover {
+    background-color: #7F7F8D;
+}
+p {
+    font-size: 40px;
+    font-weight: bold;
+    clear: both;
+}
