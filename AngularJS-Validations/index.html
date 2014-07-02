@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script data-require="angular.js@1.2.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" data-semver="1.2.16"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+  <div class="container">
+    <div class="col-sm-8 col-sm-offset-2">
+
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+        <h1>AngularJS Form Validation</h1>
+      </div>
+
+      <!-- FORM -->
+      <!-- pass in the variable if our form is valid or invalid -->
+      <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+        <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+
+        <!-- NAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.fullName.$invalid && !userForm.fullName.$pristine }">
+          <label>Name</label>
+          <input type="text" name="fullName" class="form-control" ng-model="user.fullName" required>
+          <p ng-show="userForm.fullName.$invalid && userForm.fullName.$dirty" class="help-block">You name is required.</p>
+        </div>
+
+
+        <!-- USERNAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+          <label>Username</label>
+          <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8">
+          <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+          <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+          <label>Email</label>
+          <input type="email" name="email" class="form-control" ng-model="user.email">
+          <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+
+        <!-- ZIP -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.zip.$invalid && !userForm.zip.$pristine }">
+          <label>ZIP</label>
+          <input type="text" name="zip" class="form-control" ng-model="user.zip" ng-pattern="/^[0-9]{5}$/">
+          <p ng-show="userForm.zip.$error.pattern" class="help-block">Enter a valid 5 digit zip.</p>
+        </div>
+        
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+
+      </form>
+
+    </div>
+    <!-- col-sm-8 -->
+  </div>
+  <!-- /container -->
+</body>
+
+</html>
