@@ -1,0 +1,23 @@
+<p>{{viewHeading}}</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="p in people">
+            <td>{{p.name}}</td>
+            <td>{{p.city}}</td>
+            <td>{{p.phone}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<button ng-click="goToRoute1()">First View</button>
+<button ng-click="goToRoute2()">Second View</button>
+<button ng-click="goToRoute3()">Third View</button>
