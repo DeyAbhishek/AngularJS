@@ -1,0 +1,155 @@
+
+<style type="text/css">
+    div.left {
+        float: left;
+        padding: 10px;    
+    }
+   
+</style>
+
+
+<div name="standardcase" ng-controller="StandardController" style="border : 5">
+
+     
+<div class="left">
+<h4>{{name}}  Case Information</h4>
+<table>
+<tr>
+<td>
+ <label>Case #</label>
+ </td>
+ <td>
+ <input type="number" name="caseNumber" ng-model="caseInfo.caseNumber" required>
+</td>
+</tr>
+<tr>   
+<td>
+ <label>Doctor</label>
+</td>
+<td>
+ <input type="text" name="doctor" ng-model="caseInfo.doctor">
+</td>
+</tr>
+<tr>
+<td>
+<label>Pan #</label>
+</td>
+<td>
+<input type="text" name="pan" ng-model="caseInfo.pan">
+</td>
+</tr>
+<tr>
+<td>
+<label>Shade</label>
+</td>
+<td>
+<input type="text" name="shade" ng-model="caseInfo.shade">
+</td>
+</tr>
+<tr>
+<td>
+<label>Spec Action</label>
+</td>
+<td>
+<select>
+<option value="Option1">Option1</option>
+<option value="Option2">Option2</option>
+</select>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="left">
+<h4>Patient Information</h4>
+<table>
+<tr><td>
+ <label>First name</label>
+ </td>
+ <td>
+
+ <input type="text" name="firstName" ng-model="caseInfo.firstname">
+</td>
+</tr>
+<tr><td>	   
+ <label>Last name</label>
+ </td>
+ <td>
+
+ <input type="text" name="lastname" ng-model="caseInfo.lastname" >
+ </td>
+ </tr>
+ <tr><td>
+<label>Patient ID</label>
+</td>
+<td>
+<input type="text" name="patientID" ng-model="caseInfo.patientID">
+</td>
+</tr>
+<tr><td>
+<label>Age</label></td>
+<td>
+<input type="number" name="age" ng-model="caseInfo.age">
+</td>
+</tr>
+<tr><td>
+<label>Gender</label></td>
+<td>
+<select>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="left">
+<h4> Dates</h4>
+<table>
+<tr><td>
+ <label>Date in</label>
+ </td>
+ <td>
+ <input type="datetime" name="datein" ng-model="caseInfo.datein">
+</td></tr>
+<tr><td>	   
+ <label>Rush</label>
+ </td>
+ <td>
+ <select>
+
+<option value="none">None</option>
+</select>
+</td></tr>
+
+<tr><td><label>Date Due</label></td>
+<td>
+<input type="datetime" name="datedue" ng-model="caseInfo.datedue">
+</td>
+</tr>
+<tr><td>
+<label>Try in</label>
+</td>
+<td>
+<select>
+<option value=""></option></select>
+</td>
+</tr>
+<tr><td>
+<label>Ship Date</label>
+</td>
+<td>
+ <input type="date" name="shipdate" ng-model="caseInfo.shipdate">
+ </td>
+ </tr>
+</table>
+</div>
+
+
+<!--
+REST OF THE FORM WILL BE SIMILAR
+-->
+</div>
+
+<hr>
