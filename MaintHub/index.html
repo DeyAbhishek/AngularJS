@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+
+    <title>Cases Entry - LAB</title>
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <style>
+		body {
+		  background-color: #F5F5F5;
+		}
+    </style>
+
+  </head>
+
+  <body>
+
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+        <li><a href="#"><i class="fa fa-edit"></i> Add</a></li>
+        <li><a href="#"><i class="fa fa-eraser"></i> Del</a></li>
+        <li><a href="#"><i class="fa fa-folder"></i> Save</a></li>
+        <li><a href="#"><i class="fa fa-crop"></i> Cancel</a></li>
+        <li><a href="#"><i class="fa fa-caret-square-o-left"></i> Prior</a></li>
+        <li><a href="#"><i class="fa fa-caret-square-o-right"></i> Next</a></li>
+
+        <li><a href="#"><i class="fa fa-mail-reply"></i> First</a></li>
+        <li><a href="#"><i class="fa fa-mail-forward"></i> Last</a></li>
+        <li><a href="#"><i class="fa fa-eye"></i> Find</a></li>
+        <li><a href="#"><i class="fa fa-ticket"></i> Wk Ticket</a></li>
+        <li><a href="#"><i class="fa fa-clock-o"></i> Schedule</a></li>
+	<li><a href="#"><i class="fa fa-shield"></i> Actions</a></li>
+	<li><a href="#"><i class="fa fa-square"></i> Reports</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+    <div class="container">
+		<div class="row">
+	
+		<div class="col-md-9">
+		  <a href="#shipping" style="padding-right : 30px"> Standard(1) </a>
+      
+				<a href="#delivery" style="padding-right : 30px"> Delivery/Shipping(2)</a>
+
+				<a href="#status"> Status/Billing(3)</a>
+				
+				<br>
+				<div ng-view></div>
+		</div>
+
+		</div>
+
+<br><br><hr>
+    <div ng-init="template='products.html'">
+<button ng-click="template='products.html'">Products(6)</button>
+<button ng-click="template='manual.html'">Manual Products(7)</button>
+<button ng-click="template='materials.html'">Materials(8)</button>
+<hr>
+<div ng-include="template"></div>
+</div>
+
+
+    </div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="app.js"></script>
+
+  </body>
+</html>
