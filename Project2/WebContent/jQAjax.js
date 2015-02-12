@@ -24,9 +24,9 @@ $(function() {
     $('#addPerson_btn').click(function() {
 
         var dummyPerson = {
-            "firstName": "PRVN",
-            "lastName": "SALITRA",
-            "email": "contact@prvn.co",
+            "firstName": "AAAA",
+            "lastName": "BBBB",
+            "email": "contact@aol.com",
             "address1": "123 M St",
             "address2": "",
             "city": "Richmond",
