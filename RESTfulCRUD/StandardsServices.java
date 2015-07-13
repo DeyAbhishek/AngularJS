@@ -18,7 +18,7 @@ import util.JSONResponse;
 @Path("/Standards")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class Services {
+public class StandardsServices {
 
 	@GET
 	public List<Standards> getAllStandards(){
